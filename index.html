@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devendra Thakur - Digital Marketing Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- For icons -->
+    <style>
+        /* Basic Reset and Fonts */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h1 {
+            font-size: 1.8em;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
+        }
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        /* Hero Section with Slider */
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .slider {
+            display: flex;
+            width: 300%; /* 3 images */
+            animation: slide 12s infinite;
+        }
+        .slider:hover {
+            animation-play-state: paused; /* Pause on hover */
+        }
+        .slide {
+            width: 33.33%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+        }
+        .slide1 { background-image: url('https://via.placeholder.com/1200x500/007bff/ffffff?text=Digital+Marketing+on+Amazon'); }
+        .slide2 { background-image: url('https://via.placeholder.com/1200x500/28a745/ffffff?text=Social+Media+Boost+on+Instagram'); }
+        .slide3 { background-image: url('https://via.placeholder.com/1200x500/ff6b35/ffffff?text=E-commerce+Success+on+Flipkart'); }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-33.33%); }
+            66% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .hero-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            background: #ffdd57;
+            color: #333;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #ffc107;
+        }
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background: white;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .about p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            color: #555;
+        }
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .service-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service-item {
+            width: 30%;
+            min-width: 250px;
+            margin: 15px;
+            padding: 30px;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light blue inner color */
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, #90caf9, #64b5f6); /* Brighter blue on hover */
+        }
+        .service-item i {
+            font-size: 3em;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .service-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .service-item p {
+            color: #666;
+        }
+        /* Testimonials Slider */
+        .testimonials {
+            padding: 60px 0;
+            background: white;
+            text-align: center;
+        }
+        .testimonials h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        .testimonial-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .testimonial-slides {
+            display: flex;
+            width: 300%; /* 3 slides */
+            animation: testimonialSlide 15s infinite;
+        }
+        .testimonial-slide {
+            width: 33.33%;
+            padding: 20px;
+            text-align: center;
+        }
+        .testimonial-slide p {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .testimonial-slide cite {
+            font-weight: bold;
+            color: #007bff;
+        }
+        @keyframes testimonialSlide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-33.33%); }
+            66% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
+        }
+        .dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: #ddd;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .dot.active {
+            background: #007bff;
+        }
+        /* Contact Section */
+        .contact {
+            padding: 60px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .contact p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #0056b3, #004085);
+        }
+        /* Footer */
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        footer p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+        footer a {
+            color: #ffdd57;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Devendra Thakur</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Digital Marketing Expert</h1>
+            <p>Boost Your Business on Amazon, Flipkart, Meesho, Instagram, Facebook & Twitter</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="slider">
+            <div class="slide slide1"></div>
+            <div class="slide slide2"></div>
+            <div class="slide slide3"></div>
+        </div>
+        <div class="hero-content">
+            <h2>Welcome to Professional Digital Marketing</h2>
+            <p>Grow your brand with expert services tailored for e-commerce and social media platforms.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I'm Devendra Thakur, a digital marketing specialist based in Mahesh Nagar, Jaipur, Rajasthan. With years of experience, I help businesses thrive on platforms like Amazon, Flipkart, Meesho, Instagram, Facebook, and Twitter. From SEO and ads to content creation and analytics, I provide end-to-end solutions to drive sales and engagement. Let's take your online presence to the next level!</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Amazon & Flipkart Optimization</h3>
+                    <p>Boost listings, run PPC campaigns, and increase conversions on top e-commerce platforms.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-store"></i>
+                    <h3>Meesho Marketing</h3>
+                    <p>Target Indian audiences with tailored strategies for growth and sales on Meesho.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Social Media Management</h3>
+                    <p>Engage audiences on Instagram, Facebook, and Twitter with ads, content, and analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slides">
+                    <div class="testimonial-slide">
+                        <p>"Devendra's strategies doubled our sales on Amazon. Highly recommended!"</p>
+                        <cite>- Happy Client 1</cite>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"Excellent social media management for our brand on Instagram and Facebook."</p>
+                        <cite>- Satisfied Customer 2</cite>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"Professional and results-driven. Our Flipkart listings improved significantly."</p>
+                        <cite>- Loyal Partner 3</cite>
+                    </div>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Ready to grow your business? Send me a message!</p>
+            <form action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Devendra Thakur</strong></p>
+            <p>Address: Mahesh Nagar, Jaipur, Rajasthan</p>
+            <p>Email: <a href="mailto:officialdevthakur88@gmail.com">officialdevthakur88@gmail.com</a></p>
+            <p>&copy; 2023 Devendra Thakur. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Testimonials Slider Navigation
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.querySelectorAll('.testimonial-slide');
+            let dots = document.querySelectorAll('.dot');
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(' active', '');
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            dots[slideIndex - 1].className += ' active';
+        }
+
+        // Auto-play for testimonials (optional, can remove if not needed)
+        setInterval(() => {
+            slideIndex++;
+            if (slideIndex > 3) slideIndex = 1;
+            showSlides(slideIndex);
+        }, 5000); // Change every 5 seconds
+    </script>
+</body>
+</html>
